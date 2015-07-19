@@ -3,9 +3,8 @@
  */
 
 
-module.exports = function(req, res) {
+module.exports = function(req, res, next) {
   // Your ensureAuthentication implementation
-
   if (!req.isAuthenticated()) {
     res.sendStatus(403);
   } else {

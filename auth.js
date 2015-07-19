@@ -22,7 +22,7 @@ passport.deserializeUser(function (id, done) {
       done(err, null);
     } else {
       if (user) {
-        done(null, user);
+        done(null, user.toClient());
       } else {
         done(null, null);
       }

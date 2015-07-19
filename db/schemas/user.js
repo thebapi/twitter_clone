@@ -33,4 +33,13 @@ userSchema.pre('save', function (next) {
 
 });
 
+
+userSchema.methods.toClient = function () {
+  return {
+    id: this.id,
+    name: this.name
+  }
+}
+
+
 module.exports = userSchema;
